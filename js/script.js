@@ -60,7 +60,6 @@ tl.to('.shine',{
     top:-100,
     delay:0.2,
     duration:.2,
-    // display:"none"
     })
       
 tl.to('.wrapper',{

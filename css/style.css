@@ -25,14 +25,14 @@ body {
   height: 98px;
   background-color: #000;
   position: absolute;
-  top: 770px;
+  top: 970px;
   z-index: 200;
-  display: block;
   transition: top 0.3s;
 }
 
 .container-body {
   max-width: 100vw;
+  width: 100%;
 }
 
 .overlay {
@@ -53,7 +53,7 @@ body {
   color: #fff;
   z-index: 20;
   position: absolute;
-  margin-top: 200px;
+  margin-top: 280px;
   width: 100vw;
 }
 @media (max-width: 450px) {
@@ -66,7 +66,7 @@ body {
   font-size: 6rem;
   line-height: 5rem;
   text-transform: uppercase;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Ysabeau SC", sans-serif;
 }
 .cool-loading-animation #my-intro .char {
   transform: translateY(-115px);
@@ -164,12 +164,23 @@ main {
 }
 main .hero-section {
   width: 100%;
-  height: 450px;
+  height: 600px;
   display: flex;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  main .hero-section {
+    height: 500px;
+  }
 }
 main .hero-section > div:nth-child(odd) {
   background-color: #fff;
   width: 30vw;
+}
+@media (max-width: 1024px) {
+  main .hero-section > div:nth-child(odd) {
+    width: 35vw;
+  }
 }
 main .hero-section .left {
   height: 100%;
@@ -186,10 +197,10 @@ main .hero-section .left .up {
 }
 main .hero-section .left .up h3 {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 24px;
 }
 main .hero-section .left .up p {
-  font-size: 12px;
+  font-size: 16px;
 }
 main .hero-section .left .down {
   display: flex;
@@ -202,83 +213,94 @@ main .hero-section .left .down {
   background-color: #000;
   color: #ffffff;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   main .hero-section .left .down {
     padding: 15px 10px;
   }
 }
 main .hero-section .left .down p {
-  font-size: 12px;
-  padding-left: 1.5rem;
+  font-size: 16px;
+  padding-left: 5.5rem;
   font-family: "Nunito Sans", sans-serif;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   main .hero-section .left .down p {
-    padding-left: 0;
+    padding-left: 1.4rem;
   }
 }
-main .hero-section .left .down div {
+@media (max-width: 1024px) {
+  main .hero-section .left .down p {
+    font-size: 12px;
+  }
+}
+main .hero-section .left .down .open {
+  margin-left: 3.9rem;
   position: relative;
 }
-main .hero-section .left .down div::after {
-  content: "";
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  border: 6px solid #ffffff;
-  background-color: #fff;
-  top: -83px;
-  right: -420px;
-  z-index: 2;
-}
-@media (max-width: 1240px) {
-  main .hero-section .left .down div::after {
-    right: -291px;
+@media (max-width: 1024px) {
+  main .hero-section .left .down .open {
+    margin-left: 0.9rem;
   }
 }
 main .hero-section .left .down a {
   position: relative;
   color: #ffffff;
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  main .hero-section .left .down a {
+    padding: 0.6rem;
+    font-size: 16px;
+  }
 }
 main .hero-section .left .down a::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 12%;
-  width: 350px;
+  left: 10%;
+  width: 450px;
   height: 2px;
   background-color: #ffffff;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   main .hero-section .left .down a::after {
-    left: 12%;
-    width: 200px;
+    left: 10%;
+    width: 237px;
+  }
+}
+@media (max-width: 1024px) {
+  main .hero-section .left .down a::after {
+    left: 5%;
   }
 }
 main .hero-section .left .down a::before {
   content: "";
   background: url(../img/arrow.svg) no-repeat center center/cover;
   position: absolute;
-  bottom: -6px;
-  right: -195px;
-  width: 50px;
-  height: 50px;
+  bottom: -12px;
+  right: -263px;
+  width: 70px;
+  height: 70px;
   z-index: 5;
   transition: all 0.3s;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   main .hero-section .left .down a::before {
-    right: -67px;
+    right: -93px;
+  }
+}
+@media (max-width: 1024px) {
+  main .hero-section .left .down a::before {
+    bottom: -19px;
   }
 }
 main .hero-section .left .down a:hover::before {
-  width: 65px;
-  height: 65px;
-  bottom: -13px;
-  right: -201px;
+  width: 85px;
+  height: 85px;
+  bottom: -18px;
+  right: -270px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   main .hero-section .left .down a:hover::before {
     right: -72px;
   }
@@ -286,15 +308,35 @@ main .hero-section .left .down a:hover::before {
 main .hero-section .left .down a:hover span i {
   font-size: 14px;
 }
+main .hero-section .left .down .content {
+  position: relative;
+}
+main .hero-section .left .down .content::after {
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  background-color: #fff;
+  top: -57px;
+  right: -281px;
+  z-index: 2;
+}
+@media (max-width: 1440px) {
+  main .hero-section .left .down .content::after {
+    right: -112px;
+  }
+}
 main .middle {
   position: relative;
 }
 main .middle-img {
-  width: 700px;
+  width: 100%;
   height: 100%;
 }
 main .middle-img img {
-  width: 700px;
+  width: 100%;
 }
 main .right {
   height: 100%;
@@ -310,20 +352,25 @@ main .right .up {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   main .right .up {
     padding: 5px 35px;
   }
 }
 main .right .up p {
-  font-size: 12px;
+  font-size: 16px;
 }
 main .right .up span {
   padding: 0 15px;
 }
 main .right .up span i {
-  font-size: 16px;
+  font-size: 18px;
 }
 main .right .down .image {
-  height: 225px;
+  height: 300px;
+}
+@media (max-width: 1024px) {
+  main .right .down .image {
+    height: 250px;
+  }
 }/*# sourceMappingURL=style.css.map */
