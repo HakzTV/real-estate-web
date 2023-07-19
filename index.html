@@ -5,56 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" ></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js" ></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.154.0/three.min.js" integrity="sha512-WafpPDLG+DwH6lDCsUrzvXU6/TAEFoUmK5udCmfzEoYyK28uXLF5DWk3yLOQ1PqLo9cxH/Ys/Jex6q1jHu+EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.154.0/three.module.min.js" integrity="sha512-k29Ozj3ODDGaICqkR8VTHHFwVPlgZRiGy7BQao5jxW6DY6FdjRBAQ3UUfCMa/FkwnIxMDVKFa8RwNQG04kzi1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <title>Your Company Name</title>
 </head>
 <body>
-    <header>
-        <div class="nav-bg">
-            <div class="container">
-
-                <nav>
-                    <div class="logo">
-                        Your Logo
-                    </div>
-                    <div class="links">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                   <a href="#" class="btn header-btn">
-                        Book an Enquiry
-                </a> 
-                
-                </nav>
-            </div>
-        </div>
-    </header>
-    <main class="container">
-        <div class="hero-section">
-            <div class="left">
-                <div class="up">
-                    Up
-                </div>
-                <div class="down">
-                    Down
-                </div>
-            </div>
-            <div class="middle"></div>
-            <div class="right">
-                <div class="up">
-                    Up
-                </div>
-                <div class="down">
-                    Down
-                </div>
-            </div>
-    </div>
+    <div class="shine"></div>
     
-    </main>
-    <script src="js/script.js"></script>
+    <div class="wrapper">
+        <div class="cool-loading-animation">
+            <h1 id="my-intro">Tee.Golf</h1>
+        </div>
+        <header>
+            <div class="nav-bg">
+                <div class="container">
+    
+                    <nav>
+                        <div class="logo">
+                            Your Logo
+                        </div>
+                        <div class="links">
+                            <ul>
+                                <li><a href="#">Tee Times</a></li>
+                                <li><a href="#">Courses</a></li>
+                                <li><a href="#">Lessons</a></li>
+                                <li><a href="#">Store</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                       <a href="#" class="btn header-btn">
+                            Book an Enquiry
+                    </a> 
+                    
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="container-body">
+            <div class="hero-section">
+                <div class="left">
+                    <div class="up">
+                        <h3>Weekly Deals</h3>
+                        <p>Let us lead you there</p>
+                    </div>
+                    <div class="down">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repudiandae quibusdam totam, nulla eos maxime necessitatibus commodi consectetur, tenetur excepturi autem ipsam quidem minus nesciunt fuga voluptates atque consequatur sint.</p>
+    
+                        <a href="#" class="btn">Book Orange Tree <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="overlay"></div>
+    
+                    <div class="middle-img">
+    
+                        <img src="https://images.unsplash.com/photo-1612733061393-9b9f998e1f40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1148&q=80" alt="Test">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="up">
+                        <p>Reach us on</p>
+                        <span><i class="fa fa-facebook"></i></span>
+                        <span><i class="fa fa-twitter"></i></span>
+                        <span><i class="fa fa-youtube"></i></span>
+                    </div>
+                    <div class="down">
+                        <div class="image">
+    
+                            <img src="https://images.pexels.com/photos/2828723/pexels-photo-2828723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Golf">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+       
+        
+        </main>
+       
+    </div>
+
+    <!-- <script type="module">
+        const width = window.innerWidth
+const height = window.innerHeight
+// Scene
+const scene = new THREE.Scene()
+scene.background = new THREE.Color('#00b140')
+// Camera
+const fov = 45 // AKA Field of View
+const aspect = window.innerWidth / window.innerHeight
+const near = 0.1 // the near clipping plane
+const far = 100 // the far clipping plane
+const camera = new PerspectiveCamera(fov, aspect, near, far)
+camera.position.set(0, 0, 10)
+// Renderer
+const renderer = new THREE.WebGLRenderer()
+renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+// Creating a cube
+const geometry = new THREE.BoxGeometry(2, 2, 2)
+const material = new THREE.MeshBasicMaterial({ wireframe: true })
+const cube = new THREE.Mesh(geometry, material)
+scene.add(cube)
+// Rendering the scene
+const container = document.querySelector('#threejs-container')
+container.append(renderer.domElement)
+renderer.render(scene, camera)
+    </script> -->
+    <script src="https://kit.fontawesome.com/f15be79476.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>

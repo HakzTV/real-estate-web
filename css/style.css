@@ -9,17 +9,89 @@ body {
   background-color: #ececec;
 }
 
+.wrapper {
+  position: relative;
+  transform: scale(0.89);
+  transition: transform 0.3s;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
+.shine {
+  width: 100vw;
+  height: 98px;
+  background-color: #000;
+  position: absolute;
+  top: 770px;
+  z-index: 200;
+  display: block;
+  transition: top 0.3s;
+}
+
+.container-body {
+  max-width: 100vw;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 1;
+}
+
+.cool-loading-animation {
+  display: grid;
+  place-items: center;
+  height: 100px;
+  color: #fff;
+  z-index: 20;
+  position: absolute;
+  margin-top: 200px;
+  width: 100vw;
+}
+@media (max-width: 450px) {
+  .cool-loading-animation {
+    display: none;
+  }
+}
+.cool-loading-animation #my-intro {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  font-size: 6rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif;
+}
+.cool-loading-animation #my-intro .char {
+  transform: translateY(-115px);
+  transition: transform 0.5s;
+}
+
 .btn {
   border: none;
-  background-color: #BD8D46;
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.5rem;
   text-align: center;
-  border-radius: 2px;
+  text-decoration: none;
+  color: #000;
+}
+.btn span {
+  margin-left: 10px;
+}
+.btn span i {
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -33,7 +105,14 @@ header .nav-bg nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+}
+header .nav-bg nav .logo {
+  margin-left: 15px;
+}
+@media (max-width: 450px) {
+  header .nav-bg nav .links {
+    display: none;
+  }
 }
 header .nav-bg nav .links ul {
   display: flex;
@@ -53,7 +132,7 @@ header .nav-bg nav .links ul li::before {
   bottom: 0;
   opacity: 0;
   right: 100%;
-  background-color: #BD8D46;
+  background-color: #000;
 }
 header .nav-bg nav .links ul li:hover::before {
   right: 0;
@@ -69,34 +148,182 @@ header .nav-bg nav .links ul li a {
   }
 }
 header .nav-bg nav .header-btn {
-  text-decoration: none;
+  color: #ffffff;
   font-size: 14px;
-  color: #000;
-  font-weight: bold;
+  background-color: #000;
+  transition: all 0.3s;
+}
+header .nav-bg nav .header-btn:hover {
+  background-color: rgba(0, 0, 0, 0.93);
 }
 
 main {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Ysabeau SC", sans-serif;
   margin: 0 auto;
+  padding: 15px 0 0 0;
 }
 main .hero-section {
-  padding: 15px;
   width: 100%;
+  height: 450px;
   display: flex;
-}
-main .hero-section > div:nth-child(1) {
-  width: 350px;
-}
-main .hero-section > div:nth-child(2) {
-  width: 700px;
-  background-color: red;
-}
-main .hero-section > div:nth-child(3) {
-  width: 350px;
 }
 main .hero-section > div:nth-child(odd) {
   background-color: #fff;
+  width: 30vw;
 }
-main .hero-section .left, main .hero-section .right {
-  padding: 1rem 0.3rem;
+main .hero-section .left {
+  height: 100%;
+}
+main .hero-section .left .up {
+  text-align: center;
+  border-bottom: 1px solid #a9a9a9;
+  height: 50%;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+main .hero-section .left .up h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+main .hero-section .left .up p {
+  font-size: 12px;
+}
+main .hero-section .left .down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  height: 50%;
+  padding: 40px 15px;
+  background-color: #000;
+  color: #ffffff;
+}
+@media (max-width: 1240px) {
+  main .hero-section .left .down {
+    padding: 15px 10px;
+  }
+}
+main .hero-section .left .down p {
+  font-size: 12px;
+  padding-left: 1.5rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+@media (max-width: 1240px) {
+  main .hero-section .left .down p {
+    padding-left: 0;
+  }
+}
+main .hero-section .left .down div {
+  position: relative;
+}
+main .hero-section .left .down div::after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  background-color: #fff;
+  top: -83px;
+  right: -420px;
+  z-index: 2;
+}
+@media (max-width: 1240px) {
+  main .hero-section .left .down div::after {
+    right: -291px;
+  }
+}
+main .hero-section .left .down a {
+  position: relative;
+  color: #ffffff;
+}
+main .hero-section .left .down a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  width: 350px;
+  height: 2px;
+  background-color: #ffffff;
+}
+@media (max-width: 1240px) {
+  main .hero-section .left .down a::after {
+    left: 12%;
+    width: 200px;
+  }
+}
+main .hero-section .left .down a::before {
+  content: "";
+  background: url(../img/arrow.svg) no-repeat center center/cover;
+  position: absolute;
+  bottom: -6px;
+  right: -195px;
+  width: 50px;
+  height: 50px;
+  z-index: 5;
+  transition: all 0.3s;
+}
+@media (max-width: 1240px) {
+  main .hero-section .left .down a::before {
+    right: -67px;
+  }
+}
+main .hero-section .left .down a:hover::before {
+  width: 65px;
+  height: 65px;
+  bottom: -13px;
+  right: -201px;
+}
+@media (max-width: 1240px) {
+  main .hero-section .left .down a:hover::before {
+    right: -72px;
+  }
+}
+main .hero-section .left .down a:hover span i {
+  font-size: 14px;
+}
+main .middle {
+  position: relative;
+}
+main .middle-img {
+  width: 700px;
+  height: 100%;
+}
+main .middle-img img {
+  width: 700px;
+}
+main .right {
+  height: 100%;
+}
+main .right .up {
+  padding: 5px 55px;
+  text-align: center;
+  border-bottom: 1px solid #a9a9a9;
+  background-color: #000;
+  color: #ffffff;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1240px) {
+  main .right .up {
+    padding: 5px 35px;
+  }
+}
+main .right .up p {
+  font-size: 12px;
+}
+main .right .up span {
+  padding: 0 15px;
+}
+main .right .up span i {
+  font-size: 16px;
+}
+main .right .down .image {
+  height: 225px;
 }/*# sourceMappingURL=style.css.map */
