@@ -56,7 +56,7 @@ body {
   margin-top: 280px;
   width: 100vw;
 }
-@media (max-width: 450px) {
+@media (max-width: 830px) {
   .cool-loading-animation {
     display: none;
   }
@@ -182,6 +182,11 @@ main .hero-section > div:nth-child(odd) {
     width: 35vw;
   }
 }
+@media (max-width: 830px) {
+  main .hero-section > div:nth-child(odd) {
+    width: 50vw;
+  }
+}
 main .hero-section .left {
   height: 100%;
 }
@@ -237,9 +242,19 @@ main .hero-section .left .down .open {
   margin-left: 3.9rem;
   position: relative;
 }
+@media (max-width: 1440px) {
+  main .hero-section .left .down .open {
+    margin-left: 0;
+  }
+}
 @media (max-width: 1024px) {
   main .hero-section .left .down .open {
     margin-left: 0.9rem;
+  }
+}
+@media (max-width: 830px) {
+  main .hero-section .left .down .open {
+    margin-top: 2rem;
   }
 }
 main .hero-section .left .down a {
@@ -265,7 +280,7 @@ main .hero-section .left .down a::after {
 @media (max-width: 1440px) {
   main .hero-section .left .down a::after {
     left: 10%;
-    width: 237px;
+    width: 310px;
   }
 }
 @media (max-width: 1024px) {
@@ -278,7 +293,7 @@ main .hero-section .left .down a::before {
   background: url(../img/arrow.svg) no-repeat center center/cover;
   position: absolute;
   bottom: -12px;
-  right: -263px;
+  right: -255px;
   width: 70px;
   height: 70px;
   z-index: 5;
@@ -286,7 +301,7 @@ main .hero-section .left .down a::before {
 }
 @media (max-width: 1440px) {
   main .hero-section .left .down a::before {
-    right: -93px;
+    right: -166px;
   }
 }
 @media (max-width: 1024px) {
@@ -298,15 +313,12 @@ main .hero-section .left .down a:hover::before {
   width: 85px;
   height: 85px;
   bottom: -18px;
-  right: -270px;
+  right: -265px;
 }
 @media (max-width: 1440px) {
   main .hero-section .left .down a:hover::before {
     right: -72px;
   }
-}
-main .hero-section .left .down a:hover span i {
-  font-size: 14px;
 }
 main .hero-section .left .down .content {
   position: relative;
@@ -319,13 +331,13 @@ main .hero-section .left .down .content::after {
   border-radius: 50%;
   border: 6px solid #ffffff;
   background-color: #fff;
-  top: -57px;
-  right: -281px;
+  top: -58px;
+  right: -275px;
   z-index: 2;
 }
 @media (max-width: 1440px) {
   main .hero-section .left .down .content::after {
-    right: -112px;
+    right: -183px;
   }
 }
 main .middle {
@@ -337,6 +349,11 @@ main .middle-img {
 }
 main .middle-img img {
   width: 100%;
+}
+@media (max-width: 830px) {
+  main .middle {
+    display: none;
+  }
 }
 main .right {
   height: 100%;
